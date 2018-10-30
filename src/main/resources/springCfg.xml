@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDao" class="com.ideas2it.dvdstore.dao.UserDaoImpl"></bean>
+    <bean id="userService" class="com.ideas2it.dvdstore.service.impl.UserServiceImpl">
+         <property name="userDao">
+         <ref bean="userDao"/>
+         </property>
+    </bean>
+    
+    <bean id="categoryDao" class="com.ideas2it.dvdstore.dao.CategoryDaoImpl"></bean>
+    <bean id="categoryService" class="com.ideas2it.dvdstore.service.impl.CategoryServiceImpl">
+         <property name="catgoryDao">
+         <ref bean="categoryDao"/>
+         </property>
+    </bean>
+    
+    <bean id="orderDao" class="com.ideas2it.dvdstore.dao.OrderDaoImpl"></bean>
+    <bean id="orderService" class="com.ideas2it.dvdstore.service.impl.OrderServiceImpl">
+         <property name="orderDao">
+         <ref bean="orderDao"/>
+         </property>
+    </bean>
+    
+    <bean id="customerDao" class="com.ideas2it.dvdstore.dao.CustomerDaoIml"></bean>
+    <bean id="customerService" class="com.ideas2it.dvdstore.service.impl.CustomerServiceImpl">
+         <property name="customerDao">
+         <ref bean="customerDao"/>
+         </property>
+    </bean>
+    
+    <bean id="dvdDao" class="com.ideas2it.dvdstore.dao.impl.DvdStoreDaoImpl"></bean>
+    <bean id="dvdService" class="com.ideas2it.dvdstore.service.impl.DvdStoreServiceImpl">
+        <property name="dvdDao">
+         <ref bean="dvdDao"/>
+         </property>
+         
+    </bean>
+</beans>
