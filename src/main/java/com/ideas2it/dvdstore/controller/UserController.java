@@ -116,7 +116,7 @@ public class UserController {
         try {
             String role = request.getParameter(Constants.LABEL_ROLE);
             HttpSession session = request.getSession(Boolean.TRUE);
-            session.setMaxInactiveInterval(60); 
+            session.setMaxInactiveInterval(60*10); 
             session.setAttribute(Constants.LABEL_ROLE, role);
             if (role.equals(LABEL_ADMIN)) {
                 session.setAttribute(Constants.LABEL_ID, user.getUserId());
@@ -144,7 +144,10 @@ public class UserController {
     // Used to invalidate the session
     @GetMapping("user/logout")
     public ModelAndView logOut(HttpServletRequest request) {
-        request.getSession(Boolean.FALSE).invalidate();
+        HttpSession session = request.getSession(Boolean.FALSE);
+        if (null != session) {
+            session.invalidate();
+        }
         return new ModelAndView(LOGIN_JSP, "command", new User());
     }
 }

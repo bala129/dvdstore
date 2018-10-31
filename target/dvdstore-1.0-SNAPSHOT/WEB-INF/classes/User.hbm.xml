@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+     "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+     "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+      
+ <hibernate-mapping>
+   <class name = "com.ideas2it.dvdstore.model.User" table = "USER">
+   
+   <id name = "userId" type = "int" column = "USER_ID">
+         <generator class="identity"/>
+   </id>
+   
+      <property name = "userName" column = "USER_NAME" type = "string"/>
+      <property name = "password" column = "PASSWORD" type = "string"/>
+      <property name = "role" column = "ROLE" type = "string"/>
+      
+   </class>
+ </hibernate-mapping>
+   

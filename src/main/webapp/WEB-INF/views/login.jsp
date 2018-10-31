@@ -41,6 +41,7 @@
 <div id="register" style="display:none">
  <form:form action="user" method="post" align="center" > 
  <table align="center">
+        
         <tr>
             <td><form:input type="text" path="userName" class="input" placeholder="User Name"/></td>
         </tr>
@@ -52,7 +53,7 @@
             <td><input type="password" name="confirmpassword" class="input" placeholder="Confirm Password"/></td>
         </tr>
         <tr>
-            <td><button type="submit" style="width:193px;border-radius: 20px;margin: 8px 0;height:25px" formaction="/dvdstore/user/register" onclick="return(checkPassword(this.form) && setRequired(this.form))">Register</button></td>
+            <td><button type="submit" style="width:97px;border-radius: 20px;margin: 8px 0;height:25px" formaction="/dvdstore/user/register" onclick="return(checkPassword(this.form) && setRequired(this.form))">Register</button><button type="submit" style="width:97px;border-radius: 20px;margin: 8px 0;height:25px" formaction="/dvdstore">Back</button></td>
         </tr>
         <input type="hidden" name="role" value="customer">
  </table>

@@ -1,7 +1,10 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <html>
 <body>
-
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="<c:url value = '/resources/dvdStore.css' />">
+</head>
 <form action="customer" method="get">
 <button type="submit" formaction="/dvdstore/user/logout" style = "margin-left: 90%;" >Log Out</button>
 <button type="submit" formaction="/dvdstore/customer/customerMenu" style="float:left">Back</button>
@@ -40,8 +43,8 @@
 </script>
 </c:if>
 <form method="get">
- <div id="dvdlist">
- <table style = "text-align: center;" cellspacing="8">
+ <div id="dvdlist" class="scroll">
+ <table style ="text-align: center;width:100%">
   <tr>
     <th>Dvd Id</th>
     <th>Dvd Name</th>
@@ -52,7 +55,6 @@
     <th>Release Date</th>
     <th>Category</th>
     <th>PurchaseDvd</th>
-    <th><button type="button" onclick="return dvdIsEmpty() && setVisbie()" style="width:100px;">Place Order</button></th>
   </tr>
 <c:forEach var="dvd" items="${dvds}">
   <tr>
@@ -70,10 +72,9 @@
     <td><input type="checkbox" name="dvdIds" value="${dvd.dvdId}"></td>
   </tr>
   </c:forEach>
- 
  </table>
  </div>
- 
+ <center><button id="buy" type="button" onclick="return dvdIsEmpty() && setVisbie()" style="width:357px;">Place Order</button></center>
  <div id="addressInfo" style="display:none">
  <table style= style="float:left" cellspacing="8">
     <tr>
@@ -105,6 +106,7 @@ function setVisbie() {
     document.getElementById("addressInfo").style.display='block';
     document.getElementById("dvdlist").style.display='none';
     document.getElementById("search").style.display='none';
+    document.getElementById("buy").style.display='none';
 }
 
 function dvdIsEmpty() {

@@ -16,7 +16,7 @@
 <%}else {%>
 <div align="center">
    <img src="<c:url value = '/resources/404.jpg' />" width="600px" height="400px"> <br>
-   <a href="/dvdstore/user/logout">Go to Home Page</a>
+   <a href="/dvdstore">Go to Home Page</a>
 </div>
 <%} %>
 </body>

@@ -1,10 +1,13 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="<c:url value = '/resources/dvdStore.css' />">
+</head>
 <body>
 <form action="/dvdstore/dvd/dvdMenu" method="get" align="right">
-<button type="submit" name="choice" value="home"style = "margin-right: 10px;" >Home</button><br>
+<button type="submit" name="choice" value="home"style = "margin-right: 10px;">Home</button><br>
 </form>
-
 <table align="center" cellspacing="20">
   <tr>
       <td>
@@ -29,8 +32,8 @@
       </td></td>
   </tr>
 </table>
-
- <table style = "text-align: center; width:100%" >
+<div class="scroll">
+ <table style = "text-align: center; width:100%;" >
   <tr>
     <th>Dvd Id</th>
     <th>Dvd Name</th>
@@ -64,6 +67,8 @@
   </tr>
 </c:forEach>
 </table>
+</div>
+
 <input type="hidden" name="choice" value="display">
 </body>
 <c:if test="${not empty message}">

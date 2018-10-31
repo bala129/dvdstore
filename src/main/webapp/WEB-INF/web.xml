@@ -42,7 +42,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j
       <servlet-name>DvdStore</servlet-name>
       <url-pattern>/</url-pattern>
    </servlet-mapping>
-    <!--
+    
    <error-page>
    <error-code>404</error-code>
    <location>/WEB-INF/views/error.jsp</location>
@@ -52,5 +52,5 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j
         <exception-type>java.lang.Throwable</exception-type>
         <location>/WEB-INF/views/error.jsp</location>
     </error-page>
-   -->
+   
    </web-app>   

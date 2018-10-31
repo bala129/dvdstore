@@ -28,10 +28,6 @@
 <form action="/dvdstore/dvd/showInactiveDvd" method="get" align="center">  
  <button type="submit" name="choice" value="restoreForm" style= "margin: 10px;width: 235px;" > Restore DVD</button><br>
 </form>
- <form action="/dvdstore/dvd/search" method="get" align="center">  
- <input type="text" name="detail" placeholder= "Enter movie name" /> 
- <input type="submit" name="choice" value="search" required/>
-</form>
-
+ 
 </body>
 </html>
