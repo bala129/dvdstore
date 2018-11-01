@@ -73,9 +73,8 @@
   </tr>
   </c:forEach>
  </table>
- <center><button id="buy" type="button" onclick="return dvdIsEmpty() && setVisbie()" style="width:357px;">Place Order</button></center>
  </div>
- 
+ <center><button id="buy" type="button" onclick="return dvdIsEmpty() && setVisbie()" style="width:357px;">Place Order</button></center>
  <div id="addressInfo" style="display:none">
  <table style= style="float:left" cellspacing="8">
     <tr>
@@ -107,6 +106,7 @@ function setVisbie() {
     document.getElementById("addressInfo").style.display='block';
     document.getElementById("dvdlist").style.display='none';
     document.getElementById("search").style.display='none';
+    document.getElementById("buy").style.display='none';
 }
 
 function dvdIsEmpty() {
