@@ -121,7 +121,7 @@ public class Constants {
         = "The problem is occur due to the list size is=";   
     
     public static final String ORDER_FETCH_ERROR
-        = "The problem is occur due to invalid customer =";   
+        = "The problem occurs due to invalid customer =";   
     
     public static final String ORDER_DELETE_ERROR
         = "Something problem when delete this orderID please try again later=";   
